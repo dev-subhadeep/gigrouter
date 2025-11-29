@@ -1,0 +1,25 @@
+meta {
+  name: Register User
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://127.0.0.1:4000/api/auth/register
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "email": "subhadeep@gmail.com",
+    "full_name": "Subhadeep",
+    "password": "abc123",
+    "role": "admin"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
