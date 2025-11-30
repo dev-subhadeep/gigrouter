@@ -1,7 +1,7 @@
 // src/modules/auth/auth.service.ts
 import argon2 from "argon2";
 import { db } from "../../db";
-import { users } from "../../db/schema";
+import { users } from "./auth.schema";
 import { eq } from "drizzle-orm";
 
 export async function registerUser(payload: { email: string; password: string; full_name: string; role: string }) {

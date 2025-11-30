@@ -1,0 +1,29 @@
+meta {
+  name: Create Freelancer
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{BASE}}:{{PORT}}/api/freelancers
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "first_name": "Enid",
+    "last_name": "Blyton",
+    "email": "enidblyton@gmail.com",
+    "phone": "1289-0210-22",
+    "address": "21 Lindsey Street, Kolkata",
+    "aadhaar_no": "290109201029",
+    "photo_url": "freelancers/0f59762f-39e8-41b6-a8bb-6000f76eadfd/f3a0b17f-bace-4657-a3f8-03ff97ed82c4.png",
+    "gigs": ["ayah", "nurse"]
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

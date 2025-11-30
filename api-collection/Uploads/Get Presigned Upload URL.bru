@@ -1,0 +1,23 @@
+meta {
+  name: Get Presigned Upload URL
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{BASE}}:{{PORT}}/api/uploads/presign
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "filename": "Mahadeb_Sir_acknowledgement.png",
+    "contentType": "image/png"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
