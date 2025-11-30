@@ -1,6 +1,6 @@
 import { and, eq } from "drizzle-orm";
 import { db } from "../../db";
-import { clients } from "../../db/schema";
+import { clients } from "./clients.schema";
 
 
 export async function createClient(userId: string, data: {
