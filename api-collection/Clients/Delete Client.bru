@@ -1,0 +1,15 @@
+meta {
+  name: Delete Client
+  type: http
+  seq: 4
+}
+
+delete {
+  url: {{BASE}}:{{PORT}}/api/clients/8d4be5cb-129b-4365-a1a9-b92c2dce346b
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}

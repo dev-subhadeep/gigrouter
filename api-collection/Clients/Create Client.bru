@@ -1,0 +1,27 @@
+meta {
+  name: Create Client
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{BASE}}:{{PORT}}/api/clients
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "first_name": "Joseph",
+    "last_name": "Conrad",
+    "phone": "9201020121",
+    "address": "Ballygunj",
+    "email": "jc@gmail.com"
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

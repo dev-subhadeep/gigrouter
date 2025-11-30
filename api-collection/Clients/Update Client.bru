@@ -1,0 +1,22 @@
+meta {
+  name: Update Client
+  type: http
+  seq: 3
+}
+
+put {
+  url: {{BASE}}:{{PORT}}/api/clients/8d4be5cb-129b-4365-a1a9-b92c2dce346b
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "phone": "27881002"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

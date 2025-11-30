@@ -3,6 +3,7 @@ import express from "express";
 import session from "express-session";
 import connectPgSimple from "connect-pg-simple";
 import authRoutes from "./modules/auth/auth.routes";
+import clientsRoutes from "./modules/clients/clients.routes";
 
 const app = express();
 
@@ -36,6 +37,8 @@ app.use(
 
 // routes
 app.use("/api/auth", authRoutes);
+
+app.use("/api/clients", clientsRoutes);
 
 // health
 app.get("/health", (req, res) => res.json({ ok: true }));
